@@ -944,6 +944,7 @@
 
 .footer__brand img {
   height: 40px;
+  width: auto;
   margin-bottom: var(--space-lg);
   filter: brightness(10);
 }
