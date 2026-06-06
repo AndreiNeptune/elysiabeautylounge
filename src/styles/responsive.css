@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════════════════
+   ELYSIA BEAUTY LOUNGE — Responsive Styles
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Tablet ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-split {
+    gap: var(--space-2xl);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .map-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .masonry-grid {
+    columns: 3;
+  }
+
+  .mega-menu {
+    min-width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Mobile Navigation ───────────────────────────── */
+@media (max-width: 768px) {
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: flex;
+  }
+
+  .hero__content {
+    padding-top: 100px;
+  }
+
+  .hero__badges {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .about-split__image {
+    aspect-ratio: 16/9;
+    order: -1;
+  }
+
+  .about-split__services {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  .masonry-grid {
+    columns: 2;
+    column-gap: var(--space-sm);
+  }
+
+  .masonry-grid__item {
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-strip__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-strip__actions {
+    justify-content: center;
+  }
+
+  .promo-banner {
+    padding: var(--space-2xl) var(--space-lg);
+    border-radius: var(--radius-lg);
+  }
+
+  .page-hero {
+    height: 35vh;
+    min-height: 280px;
+  }
+
+  .accordion__header {
+    font-size: var(--text-md);
+    padding: var(--space-md) 0;
+  }
+
+  .price-table td {
+    padding: var(--space-xs) var(--space-xs);
+    font-size: var(--text-xs);
+  }
+
+  .gallery-filters {
+    gap: var(--space-2xs);
+  }
+
+  .gallery-filter {
+    padding: var(--space-2xs) var(--space-md);
+    font-size: var(--text-xs);
+  }
+
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  .lightbox__close {
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+}
+
+/* ── Small Mobile ────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .masonry-grid {
+    columns: 1;
+  }
+
+  .promo-banner .promo-price {
+    font-size: var(--text-3xl);
+  }
+
+  .map-section__info {
+    padding: 0;
+  }
+}
+
+/* ── Large Desktop ───────────────────────────────── */
+@media (min-width: 1400px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}

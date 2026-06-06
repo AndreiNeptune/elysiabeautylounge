@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Foto — Elysia Beauty Lounge</title>
+  <meta name="description" content="Galerie foto cu lucrările noastre: manichiură, coafor, extensii, make-up, sprâncene. Salon premium Unirii, București.">
+  <link rel="icon" type="image/webp" href="/images/logo.webp">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Sari la conținut</a>
+  <div id="shared-nav"></div>
+  <div id="shared-drawer"></div>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <img src="/images/hero-thumb-2.avif" alt="Galerie Elysia Beauty Lounge" width="1920" height="800">
+      </div>
+      <div class="page-hero__content">
+        <span class="kicker">Portofoliu</span>
+        <h1>Galerie Foto</h1>
+        <p>Descoperă lucrările noastre — fiecare detaliu contează.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Filters -->
+        <div class="gallery-filters reveal">
+          <button class="gallery-filter active" data-filter="all">Toate</button>
+          <button class="gallery-filter" data-filter="nails">Unghii</button>
+          <button class="gallery-filter" data-filter="hair">Păr</button>
+          <button class="gallery-filter" data-filter="makeup">Make-up</button>
+          <button class="gallery-filter" data-filter="brows">Sprâncene</button>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="masonry-grid">
+          <div class="masonry-grid__item reveal" data-category="nails">
+            <img src="/images/service-nails.jpg" alt="Manichiură premium" loading="lazy" width="600" height="450">
+          </div>
+          <div class="masonry-grid__item reveal reveal-delay-1" data-category="hair">
+            <img src="/images/service-hair.jpg" alt="Coafor & styling" loading="lazy" width="600" height="800">
+          </div>
+          <div class="masonry-grid__item reveal reveal-delay-2" data-category="hair">
+            <img src="/images/service-extensions.jpg" alt="Extensii de păr" loading="lazy" width="600" height="600">
+          </div>
+          <div class="masonry-grid__item reveal reveal-delay-3" data-category="makeup">
+            <img src="/images/service-makeup.jpg" alt="Make-up profesional" loading="lazy" width="600" height="750">
+          </div>
+          <div class="masonry-grid__item reveal reveal-delay-4" data-category="brows">
+            <img src="/images/service-brows.jpg" alt="Sprâncene laminare" loading="lazy" width="600" height="500">
+          </div>
+          <div class="masonry-grid__item reveal reveal-delay-5" data-category="nails">
+            <img src="/images/hero-thumb-1.jpg" alt="Beauty treatments" loading="lazy" width="600" height="400">
+          </div>
+          <div class="masonry-grid__item reveal" data-category="hair">
+            <img src="/images/hero-main.jpg" alt="Salon interior" loading="lazy" width="600" height="700">
+          </div>
+          <div class="masonry-grid__item reveal reveal-delay-1" data-category="makeup">
+            <img src="/images/hero-thumb-3.jpg" alt="Tratament beauty" loading="lazy" width="600" height="500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" aria-label="Închide">✕</button>
+      <img src="" alt="" width="1200" height="800">
+    </div>
+  </main>
+
+  <div id="shared-footer"></div>
+  <script type="module" src="/src/main-inner.js"></script>
+</body>
+</html>
