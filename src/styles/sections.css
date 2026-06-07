@@ -44,7 +44,6 @@
   z-index: 2;
   max-width: 700px;
   padding-top: 120px;
-  padding-bottom: 140px;
 }
 
 .hero__kicker {
@@ -103,21 +102,14 @@
 }
 
 .hero__badges {
-  position: absolute;
-  bottom: 110px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
   display: flex;
   gap: var(--space-md);
-  justify-content: center;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .hero__badge {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: var(--space-xs);
   padding: var(--space-xs) var(--space-md);
   background: rgba(255, 255, 255, 0.08);
@@ -136,7 +128,7 @@
 /* Scroll indicator */
 .hero__scroll {
   position: absolute;
-  bottom: 30px;
+  bottom: var(--space-2xl);
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
