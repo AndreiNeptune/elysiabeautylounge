@@ -114,7 +114,7 @@ function getFooterHTML() {
           <p>Salon de înfrumusețare premium în zona Unirii: manichiură & pedichiură, coafor & extensii, make-up, sprâncene, epilare definitivă.</p>
         </div>
         <div>
-          <h5>Servicii</h5>
+          <h4>Servicii</h4>
           <div class="footer__links">
             <a href="/manichiura-pedichiura.html">Manichiură & Pedichiură</a>
             <a href="/coafor-extensii.html">Coafor & Extensii</a>
@@ -125,7 +125,7 @@ function getFooterHTML() {
           </div>
         </div>
         <div class="footer__contact">
-          <h5>Contact</h5>
+          <h4>Contact</h4>
           <p>📞 <a href="tel:+40771580476">0771 580 476</a></p>
           <p>📍 Bulevardul Unirii 63, București, Sector 3</p>
           <p>🕐 L–S: 10:00–20:00 · D: 11:00–17:00</p>
