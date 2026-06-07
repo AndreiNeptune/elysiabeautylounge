@@ -30,6 +30,25 @@
     min-width: 480px;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hero__content {
+    padding-bottom: 0;
+  }
+
+  .hero__badges {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-xl);
+    width: 100%;
+    white-space: normal;
+  }
 }
 
 /* ── Mobile Navigation ───────────────────────────── */
@@ -63,6 +82,13 @@
   .hero__badges {
     flex-direction: column;
     gap: var(--space-xs);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero__badge {
+    justify-content: center;
+    text-align: center;
   }
 
   .hero__scroll {
