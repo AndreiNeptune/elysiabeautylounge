@@ -81,12 +81,12 @@ function getDrawerHTML() {
         <a href="/" class="mobile-drawer__link">Acasă</a>
         <span class="mobile-drawer__link" style="color:var(--color-accent);font-weight:600;">Servicii</span>
         <div class="mobile-drawer__submenu">
-          <a href="/manichiura-pedichiura.html">💅 Manichiură & Pedichiură</a>
-          <a href="/coafor-extensii.html">✂️ Coafor & Extensii</a>
-          <a href="/make-up.html">💄 Make-up</a>
-          <a href="/sprancene.html">✨ Sprâncene</a>
-          <a href="/epilare-definitiva.html">⚡ Epilare Definitivă</a>
-          <a href="/pachete-beauty.html">🎀 Pachete Beauty</a>
+          <a href="/manichiura-pedichiura.html">Manichiură & Pedichiură</a>
+          <a href="/coafor-extensii.html">Coafor & Extensii</a>
+          <a href="/make-up.html">Make-up</a>
+          <a href="/sprancene.html">Sprâncene</a>
+          <a href="/epilare-definitiva.html">Epilare Definitivă</a>
+          <a href="/pachete-beauty.html">Pachete Beauty</a>
         </div>
         <a href="/galerie.html" class="mobile-drawer__link">Galerie</a>
         <a href="/despre-noi.html" class="mobile-drawer__link">Despre Noi</a>
@@ -96,9 +96,9 @@ function getDrawerHTML() {
         <a href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold" style="width:100%;">Programează-te</a>
       </div>
       <div class="mobile-drawer__contact">
-        <p>📍 Bulevardul Unirii 63, București</p>
-        <p>📞 <a href="tel:+40771580476">0771 580 476</a></p>
-        <p>🕐 L–S: 10:00–20:00 · D: 11:00–17:00</p>
+        <p><strong>Adresă:</strong> Bulevardul Unirii 63, București</p>
+        <p><strong>Telefon:</strong> <a href="tel:+40771580476">0771 580 476</a></p>
+        <p><strong>Program:</strong> L–S: 10:00–20:00 · D: 11:00–17:00</p>
       </div>
     </div>
   </div>`;
@@ -126,9 +126,9 @@ function getFooterHTML() {
         </div>
         <div class="footer__contact">
           <h4>Contact</h4>
-          <p>📞 <a href="tel:+40771580476">0771 580 476</a></p>
-          <p>📍 Bulevardul Unirii 63, București, Sector 3</p>
-          <p>🕐 L–S: 10:00–20:00 · D: 11:00–17:00</p>
+          <p><strong>Telefon:</strong> <a href="tel:+40771580476">0771 580 476</a></p>
+          <p><strong>Adresă:</strong> Bulevardul Unirii 63, București, Sector 3</p>
+          <p><strong>Program:</strong> L–S: 10:00–20:00 · D: 11:00–17:00</p>
         </div>
       </div>
       <div class="footer__anpc">

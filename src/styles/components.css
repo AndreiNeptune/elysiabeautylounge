@@ -1058,7 +1058,9 @@
 }
 
 .contact-strip__chip::before {
-  content: '📍';
+  content: '✦';
+  color: var(--color-accent);
+  margin-right: var(--space-xs);
 }
 
 .contact-strip__details {
