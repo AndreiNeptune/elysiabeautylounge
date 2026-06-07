@@ -61,7 +61,22 @@
   }
 
   .hero__actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--space-xs);
     margin-bottom: var(--space-xl);
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    flex: 1;
+    min-width: 0;
+    padding: 0.75rem var(--space-xs);
+    font-size: clamp(0.7rem, 2.5vw, 0.75rem);
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
   }
 
   .hero__badges {
@@ -223,14 +238,7 @@
 
 /* ── Small Mobile ────────────────────────────────── */
 @media (max-width: 480px) {
-  .hero__actions {
-    flex-direction: column;
-  }
 
-  .hero__actions .btn {
-    width: 100%;
-    text-align: center;
-  }
 
   .masonry-grid {
     columns: 1;
