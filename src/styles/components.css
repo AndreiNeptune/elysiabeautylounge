@@ -716,7 +716,8 @@
   display: block;
 }
 
-.promo-banner h2 {
+.promo-banner h2,
+.promo-banner h3 {
   font-size: var(--text-3xl);
   color: var(--color-white);
   margin-bottom: var(--space-sm);
