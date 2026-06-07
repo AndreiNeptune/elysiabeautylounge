@@ -43,6 +43,19 @@
     display: flex;
   }
 
+  .navbar {
+    padding: var(--space-sm) 0;
+  }
+
+  .navbar__logo {
+    padding: 6px;
+    border-radius: 14px;
+  }
+
+  .navbar__logo img {
+    height: 44px;
+  }
+
   .hero__content {
     padding-top: 100px;
   }
@@ -110,8 +123,9 @@
   }
 
   .page-hero {
-    height: 35vh;
-    min-height: 280px;
+    height: 40vh;
+    min-height: 320px;
+    padding-top: 100px;
   }
 
   .accordion__header {
