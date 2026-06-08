@@ -5,22 +5,22 @@
 
 :root {
   /* ── Color Palette ─────────────────────────────── */
-  --color-noir:             #1a1a1a;
-  --color-noir-deep:        #111111;
-  --color-charcoal:         #2d2d2d;
+  --color-noir:             #2C2A28;
+  --color-noir-deep:        #23211F;
+  --color-charcoal:         #3A3734;
   --color-warm-gray:        #6b6360;
   --color-warm-gray-light:  #9a9490;
-  --color-bej:              #f5f0eb;
-  --color-cream:            #faf8f5;
+  --color-bej:              #FDFBF7;
+  --color-cream:            #FCFAF8;
   --color-white:            #ffffff;
 
-  /* Accent: Rose Gold */
-  --color-accent:           #b8860b;
-  --color-accent-light:     #d4a853;
-  --color-accent-lighter:   #e8d5a3;
-  --color-accent-subtle:    rgba(184, 134, 11, 0.08);
-  --color-accent-hover:     #9a7209;
-  --color-accent-glow:      rgba(184, 134, 11, 0.25);
+  /* Accent: Golden Luxury */
+  --color-accent:           #C5A059;
+  --color-accent-light:     #D4AF37;
+  --color-accent-lighter:   #E8CE8A;
+  --color-accent-subtle:    rgba(197, 160, 89, 0.08);
+  --color-accent-hover:     #B08B46;
+  --color-accent-glow:      rgba(197, 160, 89, 0.25);
 
   /* Functional */
   --color-success:          #4a7c59;
@@ -32,9 +32,9 @@
   --color-overlay-dark:     rgba(17, 17, 17, 0.75);
 
   /* ── Typography ────────────────────────────────── */
-  --font-heading:   'Playfair Display', 'Georgia', serif;
-  --font-body:      'Montserrat', 'Helvetica Neue', sans-serif;
-  --font-accent:    'Cormorant Garamond', 'Georgia', serif;
+  --font-heading:   'Marcellus', 'Georgia', serif;
+  --font-body:      'Outfit', 'Helvetica Neue', sans-serif;
+  --font-accent:    'Marcellus', 'Georgia', serif;
 
   /* Font Sizes — Fluid scale */
   --text-xs:   clamp(0.694rem, 0.66rem + 0.17vw, 0.8rem);
