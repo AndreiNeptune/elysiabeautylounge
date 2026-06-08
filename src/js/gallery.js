@@ -60,4 +60,72 @@ export function initGallery() {
       closeLightbox();
     }
   });
+  // Service Slider - Infinite Loop & Drag to Scroll
+  const sliders = document.querySelectorAll('.service-slider');
+  sliders.forEach(slider => {
+    const items = Array.from(slider.children);
+    if (items.length === 0) return;
+
+    // Clone items for infinite scroll (prepend and append)
+    const appendClones = [];
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      appendClones.push(clone);
+      slider.appendChild(clone); // append
+    });
+    
+    items.slice().reverse().forEach(item => {
+      slider.insertBefore(item.cloneNode(true), slider.firstChild); // prepend
+    });
+
+    let jumpDistance = 0;
+    
+    // Set initial scroll to the original items
+    setTimeout(() => {
+      jumpDistance = appendClones[0].offsetLeft - items[0].offsetLeft;
+      slider.scrollLeft = jumpDistance;
+    }, 50);
+
+    // Handle seamless looping
+    slider.addEventListener('scroll', () => {
+      if (!jumpDistance) return;
+      
+      // If scrolled near the very beginning, jump forward exactly one set
+      if (slider.scrollLeft <= 10) {
+        slider.scrollLeft += jumpDistance;
+      } 
+      // If scrolled past the original set into the appended clones, jump backward exactly one set
+      else if (slider.scrollLeft >= jumpDistance * 2 - 10) {
+        slider.scrollLeft -= jumpDistance;
+      }
+    }, { passive: true });
+
+    // Drag to scroll logic
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+      slider.style.scrollBehavior = 'auto'; // Disable smooth scroll while dragging
+    });
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('active');
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll speed multiplier
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  });
 }
