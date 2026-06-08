@@ -493,6 +493,8 @@
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  padding: 10px;
+  background-color: var(--color-white);
 }
 
 .service-card__image img {
@@ -500,6 +502,8 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--duration-slow) var(--ease-out);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
 }
 
 .service-card:hover .service-card__image img {
@@ -509,8 +513,10 @@
 .service-card__image::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 10px;
   background: linear-gradient(to top, rgba(26,26,26,0.6) 0%, transparent 60%);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
 }
 
 .service-card__badge {
@@ -748,9 +754,35 @@
   font-family: var(--font-heading);
   font-size: var(--text-4xl);
   font-weight: var(--weight-bold);
-  color: var(--color-accent-light);
   margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
 }
+
+@keyframes sparkleAnim {
+  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+}
+
+.sparkle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4AF37"><path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L3 11l8.5-2.5z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 10;
+  animation: sparkleAnim 3s infinite ease-in-out;
+}
+
+.sparkle--1 { top: -10px; left: -20px; animation-delay: 0s; }
+.sparkle--2 { bottom: 10px; right: -30px; animation-delay: 1.5s; width: 14px; height: 14px; }
+.sparkle--3 { top: 20px; right: -15px; animation-delay: 0.7s; width: 10px; height: 10px; }
 
 .promo-banner p {
   color: var(--color-warm-gray-light);
@@ -870,27 +902,33 @@
   break-inside: avoid;
   margin-bottom: var(--space-md);
   border-radius: var(--radius-md);
-  overflow: hidden;
   position: relative;
   cursor: pointer;
+  padding: 10px;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
 }
 
 .masonry-grid__item img {
   width: 100%;
   display: block;
   transition: transform var(--duration-slow) var(--ease-out);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
 }
 
 .masonry-grid__item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .masonry-grid__item::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 10px;
   background: rgba(0,0,0,0);
   transition: background var(--duration-normal) var(--ease-out);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
 }
 
 .masonry-grid__item:hover::after {
@@ -1217,25 +1255,52 @@
 
 .about-split__image {
   position: relative;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
   aspect-ratio: 3/4;
+  padding: 16px;
+  background: var(--color-white);
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+  transition: all var(--duration-normal) var(--ease-out);
+  z-index: 1;
+}
+
+.about-split__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-split__image::after {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px solid var(--color-accent);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 2;
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
 .about-split__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 2px;
+  display: block;
 }
 
-.about-split__image::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  background: linear-gradient(to top, rgba(184,134,11,0.1), transparent);
+.about-split__image:hover {
+  transform: translateY(-4px) rotate(1deg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.about-split__image:hover::after {
+  inset: 12px;
+  opacity: 1;
 }
 
 /* ═══════════════════════════════════════════

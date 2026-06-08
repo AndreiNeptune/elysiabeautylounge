@@ -103,6 +103,14 @@ p {
   padding-block: var(--section-padding);
 }
 
+.section--pb-0 {
+  padding-bottom: 0;
+}
+
+.section--pt-0 {
+  padding-top: 0;
+}
+
 .section--bej {
   background-color: var(--color-bej);
 }
