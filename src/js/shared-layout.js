@@ -60,7 +60,7 @@ function getNavbarHTML() {
           <a href="/contact.html" class="navbar__link">Contact</a>
         </div>
         <div class="navbar__cta">
-          <a href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold btn--sm">Programează-te</a>
+          <a href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold">Programează-te</a>
         </div>
         <button class="navbar__burger" id="burger" aria-label="Deschide meniul" aria-expanded="false">
           <span></span><span></span><span></span>

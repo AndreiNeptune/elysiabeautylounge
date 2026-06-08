@@ -80,7 +80,8 @@
   }
 
   .hero__badges {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: var(--space-xs);
     margin-top: 0;
     margin-bottom: var(--space-xl);
