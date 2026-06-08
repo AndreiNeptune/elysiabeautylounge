@@ -105,6 +105,7 @@
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
+  max-width: 550px;
 }
 
 .hero__badge {
