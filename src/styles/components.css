@@ -1135,6 +1135,11 @@
   position: relative;
   z-index: 2;
   color: var(--color-white);
+  width: 100%;
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
+  text-align: left;
 }
 
 .page-hero__content .kicker {
@@ -1155,7 +1160,8 @@
   color: rgba(255,255,255,0.7);
   font-size: var(--text-md);
   max-width: 500px;
-  margin-inline: auto;
+  margin-inline-start: 0;
+  margin-inline-end: auto;
 }
 
 /* ═══════════════════════════════════════════
