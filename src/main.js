@@ -7,6 +7,7 @@ import { initNavigation } from './js/navigation.js';
 import { initAccordion } from './js/accordion.js';
 import { initGallery } from './js/gallery.js';
 import { initAnimations } from './js/animations.js';
+import { initReviewsCarousel } from './js/reviews.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Set current year in footer
@@ -18,5 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initAccordion();
   initGallery();
+  initReviewsCarousel();
   initAnimations();
 });
