@@ -32,9 +32,9 @@
   --color-overlay-dark:     rgba(17, 17, 17, 0.75);
 
   /* ── Typography ────────────────────────────────── */
-  --font-heading:   'Marcellus', 'Georgia', serif;
-  --font-body:      'Outfit', 'Helvetica Neue', sans-serif;
-  --font-accent:    'Marcellus', 'Georgia', serif;
+  --font-heading:   'Montserrat', 'Marcellus', 'Georgia', serif;
+  --font-body:      'Montserrat', 'Outfit', 'Helvetica Neue', sans-serif;
+  --font-accent:    'Montserrat', 'Marcellus', 'Georgia', serif;
 
   /* Font Sizes — Fluid scale */
   --text-xs:   clamp(0.694rem, 0.66rem + 0.17vw, 0.8rem);
