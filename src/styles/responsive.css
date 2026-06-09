@@ -201,8 +201,7 @@
   }
 
   .page-hero {
-    height: 40vh;
-    min-height: 320px;
+    height: 320px;
     padding-top: 100px;
   }
 
