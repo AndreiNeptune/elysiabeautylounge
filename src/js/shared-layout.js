@@ -35,29 +35,29 @@ function getNavbarHTML() {
           <div class="navbar__services-trigger">
             <span class="navbar__link">Servicii <span class="chevron"></span></span>
             <div class="mega-menu">
-              <a href="/manichiura-pedichiura.html" class="mega-menu__item">
+              <a href="/manichiura-pedichiura" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Manichiură & Pedichiură</h4><p>Semi, gel, clasic, SPA, japoneză</p></div>
               </a>
-              <a href="/coafor-extensii.html" class="mega-menu__item">
+              <a href="/coafor-extensii" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Coafor & Extensii</h4><p>Tuns, coafat, vopsit, extensii</p></div>
               </a>
-              <a href="/make-up.html" class="mega-menu__item">
+              <a href="/make-up" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Make-up</h4><p>Machiaj de zi și seară</p></div>
               </a>
-              <a href="/sprancene.html" class="mega-menu__item">
+              <a href="/sprancene" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Sprâncene</h4><p>Laminare, stilizare, vopsit</p></div>
               </a>
-              <a href="/epilare-definitiva.html" class="mega-menu__item">
+              <a href="/epilare-definitiva" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Epilare Definitivă</h4><p>Full Body de la 249 lei</p></div>
               </a>
-              <a href="/pachete-beauty.html" class="mega-menu__item">
+              <a href="/pachete-beauty" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Pachete Beauty</h4><p>Combinații avantajoase</p></div>
               </a>
             </div>
           </div>
-          <a href="/galerie.html" class="navbar__link">Galerie</a>
-          <a href="/despre-noi.html" class="navbar__link">Despre Noi</a>
-          <a href="/contact.html" class="navbar__link">Contact</a>
+          <a href="/galerie" class="navbar__link">Galerie</a>
+          <a href="/despre-noi" class="navbar__link">Despre Noi</a>
+          <a href="/contact" class="navbar__link">Contact</a>
         </div>
         <div class="navbar__cta">
           <a href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold">Programează-te</a>
@@ -81,16 +81,16 @@ function getDrawerHTML() {
         <a href="/" class="mobile-drawer__link">Acasă</a>
         <span class="mobile-drawer__link" style="color:var(--color-accent);font-weight:600;">Servicii</span>
         <div class="mobile-drawer__submenu">
-          <a href="/manichiura-pedichiura.html">Manichiură & Pedichiură</a>
-          <a href="/coafor-extensii.html">Coafor & Extensii</a>
-          <a href="/make-up.html">Make-up</a>
-          <a href="/sprancene.html">Sprâncene</a>
-          <a href="/epilare-definitiva.html">Epilare Definitivă</a>
-          <a href="/pachete-beauty.html">Pachete Beauty</a>
+          <a href="/manichiura-pedichiura">Manichiură & Pedichiură</a>
+          <a href="/coafor-extensii">Coafor & Extensii</a>
+          <a href="/make-up">Make-up</a>
+          <a href="/sprancene">Sprâncene</a>
+          <a href="/epilare-definitiva">Epilare Definitivă</a>
+          <a href="/pachete-beauty">Pachete Beauty</a>
         </div>
-        <a href="/galerie.html" class="mobile-drawer__link">Galerie</a>
-        <a href="/despre-noi.html" class="mobile-drawer__link">Despre Noi</a>
-        <a href="/contact.html" class="mobile-drawer__link">Contact</a>
+        <a href="/galerie" class="mobile-drawer__link">Galerie</a>
+        <a href="/despre-noi" class="mobile-drawer__link">Despre Noi</a>
+        <a href="/contact" class="mobile-drawer__link">Contact</a>
       </nav>
       <div class="mobile-drawer__cta">
         <a href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold" style="width:100%;">Programează-te</a>
@@ -116,12 +116,12 @@ function getFooterHTML() {
         <div>
           <h4>Servicii</h4>
           <div class="footer__links">
-            <a href="/manichiura-pedichiura.html">Manichiură & Pedichiură</a>
-            <a href="/coafor-extensii.html">Coafor & Extensii</a>
-            <a href="/make-up.html">Make-up</a>
-            <a href="/sprancene.html">Sprâncene</a>
-            <a href="/epilare-definitiva.html">Epilare Definitivă</a>
-            <a href="/pachete-beauty.html">Pachete Beauty</a>
+            <a href="/manichiura-pedichiura">Manichiură & Pedichiură</a>
+            <a href="/coafor-extensii">Coafor & Extensii</a>
+            <a href="/make-up">Make-up</a>
+            <a href="/sprancene">Sprâncene</a>
+            <a href="/epilare-definitiva">Epilare Definitivă</a>
+            <a href="/pachete-beauty">Pachete Beauty</a>
           </div>
         </div>
         <div class="footer__contact">
