@@ -88,15 +88,27 @@ export function initGallery() {
 
     // Handle seamless looping
     slider.addEventListener('scroll', () => {
-      if (!jumpDistance) return;
+      if (!jumpDistance || isDown) return; // Don't jump while dragging
       
       // If scrolled near the very beginning, jump forward exactly one set
       if (slider.scrollLeft <= 10) {
+        slider.style.scrollBehavior = 'auto';
+        slider.style.scrollSnapType = 'none';
         slider.scrollLeft += jumpDistance;
+        setTimeout(() => {
+          slider.style.scrollBehavior = 'smooth';
+          slider.style.scrollSnapType = 'x mandatory';
+        }, 50);
       } 
       // If scrolled past the original set into the appended clones, jump backward exactly one set
       else if (slider.scrollLeft >= jumpDistance * 2 - 10) {
+        slider.style.scrollBehavior = 'auto';
+        slider.style.scrollSnapType = 'none';
         slider.scrollLeft -= jumpDistance;
+        setTimeout(() => {
+          slider.style.scrollBehavior = 'smooth';
+          slider.style.scrollSnapType = 'x mandatory';
+        }, 50);
       }
     }, { passive: true });
 
@@ -111,20 +123,27 @@ export function initGallery() {
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
       slider.style.scrollBehavior = 'auto'; // Disable smooth scroll while dragging
+      slider.style.scrollSnapType = 'none';
     });
     slider.addEventListener('mouseleave', () => {
+      if (!isDown) return;
       isDown = false;
       slider.classList.remove('active');
+      slider.style.scrollBehavior = 'smooth';
+      slider.style.scrollSnapType = 'x mandatory';
     });
     slider.addEventListener('mouseup', () => {
+      if (!isDown) return;
       isDown = false;
       slider.classList.remove('active');
+      slider.style.scrollBehavior = 'smooth';
+      slider.style.scrollSnapType = 'x mandatory';
     });
     slider.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; // Scroll speed multiplier
+      const walk = (x - startX) * 1.5; // Slightly slower, smoother multiplier
       slider.scrollLeft = scrollLeft - walk;
     });
   });
