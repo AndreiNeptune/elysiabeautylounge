@@ -124,6 +124,17 @@ function getFooterHTML() {
             <a href="/pachete-beauty">Pachete Beauty</a>
           </div>
         </div>
+        <div>
+          <h4>Legal</h4>
+          <div class="footer__links">
+            <a href="/politica-de-confidentialitate">Politica de Confidențialitate</a>
+            <a href="/termeni-si-conditii">Termeni și Condiții</a>
+            <div class="footer__legal-badges">
+              <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow noopener"><img src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sal.svg" alt="SAL" width="180" height="60"></a>
+              <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow noopener"><img src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sol.svg" alt="SOL" width="180" height="60"></a>
+            </div>
+          </div>
+        </div>
         <div class="footer__contact">
           <h4>Contact</h4>
           <p><strong>Telefon:</strong> <a href="tel:+40771580476">0771 580 476</a></p>
@@ -131,13 +142,13 @@ function getFooterHTML() {
           <p><strong>Program:</strong> L–S: 10:00–20:00 · D: 11:00–17:00</p>
         </div>
       </div>
-      <div class="footer__anpc">
-        <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow noopener"><img src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sal.svg" alt="SAL" width="180" height="60"></a>
-        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow noopener"><img src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sol.svg" alt="SOL" width="180" height="60"></a>
-      </div>
       <div class="footer__bottom">
-        <p>© <span data-year></span> elysiabeautylounge.ro — Toate drepturile rezervate.</p>
-        <p><a href="https://anpc.ro/" target="_blank" rel="noopener">ANPC</a> · <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">Platforma SOL</a></p>
+        <div class="footer__legal-info">
+          <p style="opacity: 0.7;">© 2025 ELYSIA BEAUTY LOUNGE SRL | CUI: 52231547 | Reg. Com: J2025056110006 | Sediu: Str. Odei 82, Sc. C, Et. 1, Ap. 2, Sector 4, București</p>
+        </div>
+        <div class="footer__attribution">
+          <p><a href="https://upscaleinnovation.com/" target="_blank" rel="noopener" style="opacity: 0.8;">Powered by Upscale Innovation Group</a></p>
+        </div>
       </div>
     </div>
   </footer>`;
