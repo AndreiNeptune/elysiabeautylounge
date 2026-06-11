@@ -127,7 +127,7 @@ function getFooterHTML() {
         <div>
           <h4>Legal</h4>
           <div class="footer__links">
-            <a href="/politica-de-confidentialitate">Politica de Confidențialitate</a>
+            <a href="/privacy-cookies">Politica de Confidențialitate și Cookie-uri</a>
             <a href="/termeni-si-conditii">Termeni și Condiții</a>
             <div class="footer__legal-badges">
               <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow noopener"><img src="https://etamade-com.github.io/anpc-sal-sol-logo/anpc-sal.svg" alt="SAL" width="180" height="60"></a>
