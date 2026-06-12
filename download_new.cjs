@@ -1,18 +1,30 @@
 const axios = require('axios');
 const sharp = require('sharp');
-const fs = require('fs').promises;
+const fs = require('fs');
 const path = require('path');
 
-const urls = [
-  "https://images.fresha.com/professional-profiles/profile/5936577/25ebc1d9-e0f9-463b-a570-64d5bf2dc760.jpeg?class=width-xlarge&dpr=1&keyId=1NfSCxp8hRdKSmr8&signature=dxddNHo/C4itDH+ShzmZwSZCgSE&f_width=1920",
-  "https://images.fresha.com/professional-profiles/profile/5936577/c9882f1e-e471-4f96-baee-9435cca46d0c.jpeg?class=width-xlarge&dpr=1&keyId=1NfSCxp8hRdKSmr8&signature=uY123W0iUSp6G36Hf2zHaPfpJZA&f_width=1920",
-  "https://images.fresha.com/professional-profiles/profile/5936577/f94652e2-1bfc-41d5-bb10-0f5e24c2bb00.jpeg?class=width-xlarge&dpr=1&keyId=1NfSCxp8hRdKSmr8&signature=B6Ua88lHxNMXdbKxGj9YZJSCXOQ&f_width=1920"
+const packageUrls = [
+  "https://images.fresha.com/partner-portfolios/providers/2655167/2d3fb0b8-35a7-468e-82a6-fab2a2d21859.jpg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=CzB/0DVgAsYvovBPkyQ8lwcXf0Q&f_width=1920"
 ];
 
+const makeupUrls = [
+  "https://images.fresha.com/partner-portfolios/providers/2655167/ca04ca4a-e00c-45d8-837f-0825b6700022.jpeg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=pchJCLN4y1vU2r9uMdwNKyV6uPI&f_width=1920",
+  "https://images.fresha.com/partner-portfolios/providers/2655167/08b809e2-ae3f-4f8b-be02-68fb893530bd.jpeg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=XlSRah9ihCGT0acJpYMK6ynMP4c&f_width=1920",
+  "https://images.fresha.com/partner-portfolios/providers/2655167/7c08cdcf-9e01-4e4b-b172-164031121140.jpeg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=e8P0kYQN0FiVqzFgRTDl/Pfvx9o&f_width=1920",
+  "https://images.fresha.com/partner-portfolios/providers/2655167/0f8fdc40-152f-423d-b4b1-e5c1d0c1d17e.jpeg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=7atE6aFml7pVZSuEqZyRsdojF9I&f_width=1920",
+  "https://images.fresha.com/partner-portfolios/providers/2655167/2b6a9f67-2315-42b2-828a-8d9db3e40350.jpeg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=zF3+KUDuOi7fKEsdoJB7B35gYmI&f_width=1920",
+  "https://images.fresha.com/partner-portfolios/providers/2655167/c5a7663f-a1a4-4122-9489-77fc424eae5f.jpeg?class=width-xlarge&dpr=1&keyId=rl8WOyy9WOMLne9A&signature=t2VmMKX/zZFkAJwghM19CE0EoNg&f_width=1920"
+];
+
+const urls = [...packageUrls, ...makeupUrls];
 const seoNames = [
-  "manichiura-design-modern-elysia-20",
-  "unghii-model-french-elysia-21",
-  "manichiura-perfecta-elysia-22"
+  "pachete-beauty-new-5",
+  "makeup-elysia-6",
+  "makeup-elysia-7",
+  "makeup-elysia-8",
+  "makeup-elysia-9",
+  "makeup-elysia-10",
+  "makeup-elysia-11"
 ];
 
 const outDir = path.join(__dirname, 'public', 'images', 'gallery');
