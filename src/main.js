@@ -9,6 +9,7 @@ import { initGallery } from './js/gallery.js';
 import { initAnimations } from './js/animations.js';
 import { initReviewsCarousel } from './js/reviews.js';
 import { initCookieBanner } from './js/cookie-banner.js';
+import { initLoadMore } from './js/load-more.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Set current year in footer
@@ -23,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initReviewsCarousel();
   initAnimations();
   initCookieBanner();
+  initLoadMore();
 });
