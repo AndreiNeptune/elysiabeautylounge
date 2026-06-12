@@ -20,7 +20,7 @@ export function initGallery() {
 
       // Filter items
       items.forEach(item => {
-        if (category === 'all' || item.dataset.category === category) {
+        if (category === 'all' || item.dataset.category.split(' ').includes(category)) {
           item.style.display = '';
           setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
         } else {
