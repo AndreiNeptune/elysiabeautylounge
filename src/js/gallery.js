@@ -14,6 +14,15 @@ export function initGallery() {
     filter.addEventListener('click', () => {
       const category = filter.dataset.filter;
 
+      // Update URL (Deep Linking)
+      const url = new URL(window.location);
+      if (category === 'all') {
+        url.searchParams.delete('filter');
+      } else {
+        url.searchParams.set('filter', category);
+      }
+      window.history.replaceState({}, '', url);
+
       // Update active filter
       filters.forEach(f => f.classList.remove('active'));
       filter.classList.add('active');
@@ -31,6 +40,16 @@ export function initGallery() {
       });
     });
   });
+
+  // Init filter from URL on page load
+  const params = new URLSearchParams(window.location.search);
+  const filterParam = params.get('filter');
+  if (filterParam) {
+    const targetFilter = Array.from(filters).find(f => f.dataset.filter === filterParam);
+    if (targetFilter) {
+      setTimeout(() => targetFilter.click(), 50);
+    }
+  }
 
   // Lightbox open
   items.forEach(item => {
