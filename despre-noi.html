@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="ro-RO">
 <head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+  if (localStorage.getItem('elysia_cookies_accepted') === 'true') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K4587WFV');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Despre Noi — Elysia Beauty Lounge</title>
@@ -28,6 +53,10 @@
   <meta name="twitter:image" content="https://elysiabeautylounge.vercel.app/images/logo.webp">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4587WFV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <a href="#main-content" class="skip-link">Sari la conținut</a>
   <div id="shared-nav"></div>
   <div id="shared-drawer"></div>
@@ -65,7 +94,7 @@
             <p>Indiferent că ne alegi pentru o manichiură impecabilă, o schimbare de look, un machiaj care să atragă toate privirile sau o piele mereu fină, la Elysia Beauty Lounge vei găsi mereu un mediu primitor și o echipă gata să-ți îndeplinească dorințele.</p>
             <p>Te așteptăm să descoperi diferența pe care o face pasiunea pentru detalii!</p>
             <div style="margin-top:var(--space-2xl);">
-              <a href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold">Fă o programare</a>
+              <a onclick="dataLayer.push({'event': 'btn_programeaza'});" href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold">Fă o programare</a>
             </div>
           </div>
           <div class="about-split__image reveal reveal-delay-2" style="direction:ltr;">
