@@ -1198,6 +1198,8 @@
   content: '';
   position: absolute;
   inset: 0;
+  bottom: 0.1px;
+  pointer-events: none;
   background: linear-gradient(to bottom, rgba(17,17,17,0.55), rgba(17,17,17,0.7));
 }
 

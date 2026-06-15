@@ -31,6 +31,8 @@
   content: '';
   position: absolute;
   inset: 0;
+  bottom: 0.1px; /* Lighthouse LCP overlay hack */
+  pointer-events: none;
   background: linear-gradient(
     135deg,
     rgba(17, 17, 17, 0.78) 0%,
