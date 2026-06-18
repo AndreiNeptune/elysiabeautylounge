@@ -1,7 +1,29 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
+import fs from 'fs'
+
+function htmlCleanUrlsPlugin() {
+  return {
+    name: 'html-clean-urls',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url && req.url !== '/' && !req.url.includes('.')) {
+          const url = new URL(req.url, 'http://localhost')
+          const pathname = url.pathname
+          const possibleHtmlPath = resolve(__dirname, pathname.slice(1) + '.html')
+          if (fs.existsSync(possibleHtmlPath)) {
+            req.url = pathname + '.html' + url.search
+          }
+        }
+        next()
+      })
+    }
+  }
+}
+
 export default defineConfig({
+  plugins: [htmlCleanUrlsPlugin()],
   build: {
     rollupOptions: {
       input: {

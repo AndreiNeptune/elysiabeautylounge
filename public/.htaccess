@@ -1,0 +1,7 @@
+# Elysia Beauty Lounge - Apache/LiteSpeed Server Configuration
+
+RewriteEngine On
+
+# Redirect old .html pages to their clean URL counterparts
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
