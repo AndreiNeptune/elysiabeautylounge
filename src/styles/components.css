@@ -780,6 +780,17 @@
   margin-bottom: var(--space-sm);
 }
 
+.footer__title {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
 .promo-banner .promo-price {
   font-family: var(--font-heading);
   font-size: var(--text-4xl);
@@ -1459,6 +1470,7 @@
 .load-more-container {
   text-align: center;
   margin-top: var(--space-xl);
+  display: none;
 }
 
 /* ═══════════════════════════════════════════
@@ -1591,3 +1603,38 @@
 .read-more-btn:hover {
   text-decoration: underline;
 }
+
+/* -------------------------------------------
+   FLOATING WHATSAPP BUTTON
+   ------------------------------------------- */
+.floating-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.floating-wa:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+.floating-wa svg {
+  width: 35px;
+  height: 35px;
+}
+@media (min-width: 1025px) {
+  .floating-wa {
+    bottom: 32px;
+    right: 32px;
+  }
+}
+

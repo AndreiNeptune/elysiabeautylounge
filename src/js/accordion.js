@@ -39,7 +39,10 @@ export function initAccordion() {
       firstItem.classList.add('open');
       const content = firstItem.querySelector('.accordion__content');
       const inner = content.querySelector('.accordion__inner');
-      content.style.maxHeight = inner.scrollHeight + 'px';
+      // Use setTimeout to avoid forced synchronous layout (reflow thrashing) during initial paint
+      setTimeout(() => {
+        content.style.maxHeight = inner.scrollHeight + 'px';
+      }, 0);
     }
   });
 }

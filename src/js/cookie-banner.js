@@ -30,8 +30,8 @@ export function initCookieBanner() {
   btnAccept.addEventListener('click', () => {
     localStorage.setItem(cookieName, 'true');
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'update', {
+    window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'update', {
       'ad_storage': 'granted',
       'ad_user_data': 'granted',
       'ad_personalization': 'granted',
@@ -42,6 +42,14 @@ export function initCookieBanner() {
 
   btnReject.addEventListener('click', () => {
     localStorage.setItem(cookieName, 'false');
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'update', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
     hideBanner();
   });
 

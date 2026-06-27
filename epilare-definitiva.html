@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="ro-RO">
 <head>
+  <meta charset="UTF-8">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Fallback default for non-EEA users
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Default for EEA + UK + CH users
   gtag('consent', 'default', {
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
+    'analytics_storage': 'denied',
+    'region': ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH']
   });
   if (localStorage.getItem('elysia_cookies_accepted') === 'true') {
     gtag('consent', 'update', {
@@ -16,6 +26,13 @@
       'ad_user_data': 'granted',
       'ad_personalization': 'granted',
       'analytics_storage': 'granted'
+    });
+  } else if (localStorage.getItem('elysia_cookies_accepted') === 'false') {
+    gtag('consent', 'update', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
     });
   }
 </script>
@@ -26,14 +43,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PRLW6F72');</script>
 <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=optional">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=optional" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=optional">
+  </noscript>
   <title>Epilare Definitivă — Elysia Beauty Lounge</title>
   <meta name="description" content="Epilare definitivă full body de la 249 lei. Pachete de 4, 6 sau 8 ședințe. Zone individuale disponibile. Salon Unirii, București.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/webp" href="/images/logo.webp">
+    <link rel="icon" type="image/webp" href="/images/logo.webp">
   
   <!-- Open Graph / Social Media Preview -->
   <meta property="og:title" content="Epilare Definitivă — Elysia Beauty Lounge">
@@ -57,6 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRLW6F72"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
   <a href="#main-content" class="skip-link">Sari la conținut</a>
   <div id="shared-nav"></div>
   <div id="shared-drawer"></div>
@@ -64,7 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main id="main-content">
     <section class="page-hero">
       <div class="page-hero__bg">
-        <img src="/images/service-epilation.webp" alt="Epilare Definitivă" width="1920" height="800">
+        <img src="/images/service-epilation.webp" fetchpriority="high" alt="Epilare Definitivă" width="1920" height="800">
       </div>
       <div class="page-hero__content">
         <span class="kicker">Servicii Premium</span>
@@ -78,8 +99,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container reveal">
         <div class="promo-banner">
           <span class="kicker">✦ Ofertă Specială</span>
-          <h3>Epilare Definitivă Full Body</h3>
-          <div class="promo-price">249 Lei</div>
+          <h2>Epilare Definitivă Full Body</h2>
+          <div class="promo-price">
+            <span class="sparkle sparkle--1"></span>
+            <span class="sparkle sparkle--2"></span>
+            <span class="sparkle sparkle--3"></span>
+            249 Lei
+          </div>
           <p>Piele fină, confort și rezultate vizibile de la prima ședință. Tehnologie modernă, în siguranță și fără durere.</p>
           <a onclick="dataLayer.push({'event': 'btn_programeaza'});" href="https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer?share=true&pId=2655167" target="_blank" rel="noopener" class="btn btn--gold">Programează-te</a>
         </div>

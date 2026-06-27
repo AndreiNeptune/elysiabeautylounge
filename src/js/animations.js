@@ -27,12 +27,27 @@ export function initAnimations() {
 
   // Parallax on hero (subtle)
   const heroBg = document.querySelector('.hero__bg img');
-  if (heroBg) {
+  const hero = document.querySelector('.hero');
+  
+  if (heroBg && hero) {
+    let heroHeight = hero.offsetHeight;
+    
+    // Update height on resize
+    window.addEventListener('resize', () => {
+      heroHeight = hero.offsetHeight;
+    }, { passive: true });
+
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const heroHeight = document.querySelector('.hero')?.offsetHeight || 800;
-      if (scrollY < heroHeight) {
-        heroBg.style.transform = `translateY(${scrollY * 0.15}px) scale(1.05)`;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          if (scrollY <= heroHeight) {
+            heroBg.style.transform = `translateY(${scrollY * 0.15}px) scale(1.05)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     }, { passive: true });
   }

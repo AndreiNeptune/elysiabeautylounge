@@ -19,9 +19,9 @@ export function initLoadMore() {
       }
     });
 
-    // Hide load more container if 5 or fewer items
-    if (items.length <= visibleCount && loadMoreContainer) {
-      loadMoreContainer.style.display = 'none';
+    // Show load more container if more than 5 items
+    if (items.length > visibleCount && loadMoreContainer) {
+      loadMoreContainer.style.display = 'block';
     }
 
     if (loadMoreBtn) {

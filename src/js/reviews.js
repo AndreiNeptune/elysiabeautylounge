@@ -49,7 +49,7 @@ export function initReviewsCarousel() {
           <div class="review-header">
             <div class="review-avatar">${getInitials(review.name)}</div>
             <div class="review-meta">
-              <h4 class="review-name">${review.name}</h4>
+              <h3 class="review-name">${review.name}</h3>
               <div class="review-time">${review.time}</div>
             </div>
             <div class="review-google-icon">${googleSvg}</div>

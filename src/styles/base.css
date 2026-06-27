@@ -212,7 +212,7 @@ p {
 /* ── Skip to content (accessibility) ─────────────── */
 .skip-link {
   position: absolute;
-  top: -100%;
+  top: -100px; /* Fixed value instead of % to prevent flashes */
   left: var(--space-md);
   padding: var(--space-xs) var(--space-md);
   background: var(--color-accent);
@@ -220,6 +220,7 @@ p {
   border-radius: var(--radius-sm);
   z-index: var(--z-toast);
   font-weight: var(--weight-semibold);
+  transition: top var(--duration-fast) var(--ease-out);
 }
 
 .skip-link:focus {

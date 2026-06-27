@@ -2,7 +2,6 @@
    ELYSIA BEAUTY LOUNGE — Main CSS Entry
    ═══════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&text=0123456789');
 @import './styles/variables.css';
 @import './styles/base.css';
 @import './styles/components.css';
