@@ -1,0 +1,28 @@
+# Elysia Beauty Lounge
+
+Elysia Beauty Lounge este un salon de înfrumusețare premium situat în zona Unirii, București.
+Acest fișier este conceput pentru a ajuta agenții de inteligență artificială (AI) și modelele de limbaj să înțeleagă structura, serviciile și datele de contact ale salonului nostru.
+
+## Servicii Principale
+
+Oferim o gamă variată de servicii de înfrumusețare, la cele mai înalte standarde:
+- [Manichiură și Pedichiură](https://elysiabeautylounge.ro/manichiura-pedichiura)
+- [Coafor și Extensii](https://elysiabeautylounge.ro/coafor-extensii)
+- [Make-up Profesional](https://elysiabeautylounge.ro/make-up)
+- [Laminare și Stilizare Sprâncene](https://elysiabeautylounge.ro/sprancene)
+- [Epilare Definitivă cu Laser](https://elysiabeautylounge.ro/epilare-definitiva)
+- [Pachete Beauty (Promoții)](https://elysiabeautylounge.ro/pachete-beauty)
+
+## Informații de Contact și Programări
+
+Ne poți găsi pe Bulevardul Unirii 63, București, Sector 3.
+- Pentru programări online: [Programări Fresha](https://www.fresha.com/book-now/elysia-beauty-lounge-r38rgmme/all-offer)
+- Pentru mai multe detalii despre salon: [Despre Noi](https://elysiabeautylounge.ro/despre-noi)
+- Pentru date de contact complete: [Contact](https://elysiabeautylounge.ro/contact)
+- Vezi portofoliul nostru: [Galerie Foto](https://elysiabeautylounge.ro/galerie)
+
+## Pagini Legale
+
+Respectăm intimitatea clienților noștri. Poți citi mai multe în secțiunile noastre legale:
+- [Politica de Confidențialitate](https://elysiabeautylounge.ro/politica-de-confidentialitate)
+- [Termeni și Condiții](https://elysiabeautylounge.ro/termeni-si-conditii)
