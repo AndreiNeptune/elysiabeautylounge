@@ -1,0 +1,1 @@
+import{a as e,i as t,n,o as r,r as i,s as a,t as o}from"./load-more-C9QaN6uY.js";document.addEventListener(`DOMContentLoaded`,()=>{document.querySelectorAll(`[data-year]`).forEach(e=>{e.textContent=new Date().getFullYear()}),a(),r(),e(),i(),t(),n(),o()});
