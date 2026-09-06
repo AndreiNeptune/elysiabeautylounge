@@ -30,15 +30,15 @@
 
 .cookie-banner__content p {
   font-size: var(--text-sm);
-  color: var(--color-warm-gray);
+  color: var(--color-charcoal);
   margin: 0;
   line-height: var(--leading-normal);
 }
 
 .cookie-banner__content a {
-  color: var(--color-accent);
+  color: var(--color-noir);
   text-decoration: underline;
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-semibold);
 }
 
 .cookie-banner__actions {
@@ -65,7 +65,7 @@
 
 .cookie-banner__btn--accept {
   background: var(--color-accent);
-  color: var(--color-white);
+  color: var(--color-noir-deep);
 }
 
 .cookie-banner__btn--accept:hover {

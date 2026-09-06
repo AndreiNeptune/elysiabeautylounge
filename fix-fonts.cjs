@@ -1,47 +1,37 @@
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
-const files = [
-  'coafor-extensii.html',
-  'contact.html',
-  'despre-noi.html',
-  'epilare-definitiva.html',
-  'galerie.html',
-  'index.html',
-  'make-up.html',
-  'manichiura-pedichiura.html',
-  'pachete-beauty.html',
-  'politica-cookie.html',
-  'politica-de-confidentialitate.html',
-  'sprancene.html',
-  'termeni-si-conditii.html'
-];
+const dir = __dirname;
+const htmlFiles = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
 
-const fontLinks = `
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=optional">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=optional" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=optional">
-  </noscript>
-`;
+const fontUrl = "https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap";
 
-files.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  if (!fs.existsSync(filePath)) return;
+// Fetch the CSS from Google Fonts (with a modern User-Agent to get woff2)
+const options = {
+  headers: {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+  }
+};
 
-  let content = fs.readFileSync(filePath, 'utf8');
-
-  // Remove existing preconnect and font links
-  content = content.replace(/<link rel="preconnect" href="https:\/\/fonts\.googleapis\.com">\s*/gi, '');
-  content = content.replace(/<link rel="preconnect" href="https:\/\/fonts\.gstatic\.com"[^>]*>\s*/gi, '');
-  content = content.replace(/<link href="https:\/\/fonts\.googleapis\.com\/css2\?[^>]*>\s*/gi, '');
-
-  // Insert the new async font links right after meta charset and viewport
-  // We can insert it just before the title tag
-  content = content.replace(/(<title>)/i, fontLinks.trim() + '\n  $1');
-
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Updated fonts in ${file}`);
+https.get(fontUrl, options, (res) => {
+  let css = '';
+  res.on('data', chunk => css += chunk);
+  res.on('end', () => {
+    // Write CSS to HTML files
+    htmlFiles.forEach(file => {
+      const filePath = path.join(dir, file);
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      const regex = /<link rel="stylesheet" href="https:\/\/fonts\.googleapis\.com\/css2[^>]+>/g;
+      
+      if (regex.test(content)) {
+        content = content.replace(regex, `<style>${css}</style>`);
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`Inlined Google Fonts CSS in ${file}`);
+      }
+    });
+  });
+}).on('error', err => {
+  console.error('Error fetching fonts:', err);
 });

@@ -26,8 +26,8 @@ htmlFiles.forEach(file => {
       
       // Rewrite relative chunk imports to absolute paths so they resolve correctly on subpages
       safeJsContent = safeJsContent
-        .replace(/from\s*["']\.\/([^"']+\.js)["']/g, 'from "/assets/$1"')
-        .replace(/import\s*\(\s*["']\.\/([^"']+\.js)["']/g, 'import("/assets/$1"');
+        .replace(/from\s*["'`]\.\/([^"'`]+\.js)["'`]/g, 'from "/assets/$1"')
+        .replace(/import\s*\(\s*["'`]\.\/([^"'`]+\.js)["'`]\s*\)/g, 'import("/assets/$1")');
       
       // Replace the external script tag with an inline script tag
       html = html.replace(scriptTag, `<script type="module">${safeJsContent}</script>`);

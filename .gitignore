@@ -37,3 +37,6 @@ dist-ssr
 .tempmediaStorage/
 scratch/
 tmp/
+*.zip
+*.cjs
+temp_*.webp

@@ -37,9 +37,10 @@ export function initReviewsCarousel() {
     return name.substring(0, 2).toUpperCase();
   };
 
-  containers.forEach(wrapper => {
+  const renderReviews = (wrapper) => {
     let cardsHtml = '';
-
+    
+    // We can render all reviews now since it's lazy loaded and won't affect initial DOM size
     reviews.forEach(review => {
       const isLongText = review.text.length > 150;
       const initialText = isLongText ? review.text.substring(0, 150) + '...' : review.text;
@@ -72,7 +73,10 @@ export function initReviewsCarousel() {
         <h2 class="section-title">Clienți mulțumiți</h2>
       </div>
       <div class="reviews-carousel">
-        ${cardsHtml}
+        <div class="reviews-track">
+          ${cardsHtml}
+          ${cardsHtml}
+        </div>
       </div>
     `;
     
@@ -95,5 +99,110 @@ export function initReviewsCarousel() {
         }
       });
     });
+
+    // Smooth sub-pixel auto-scroll with drag support
+    const carousel = wrapper.querySelector('.reviews-carousel');
+    const track = wrapper.querySelector('.reviews-track');
+    let currentX = 0;
+    let speed = 0.5; // Smooth speed
+    let isHovered = false;
+    let isDragging = false;
+    let startX = 0;
+    let dragStartX = 0;
+
+    // Hover to pause
+    carousel.addEventListener('mouseenter', () => isHovered = true);
+    carousel.addEventListener('mouseleave', () => {
+      isHovered = false;
+      isDragging = false;
+    });
+
+    // Touch events for mobile dragging
+    track.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      dragStartX = currentX;
+    }, {passive: true});
+
+    track.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const dx = e.touches[0].clientX - startX;
+      currentX = dragStartX + dx;
+    }, {passive: true});
+
+    track.addEventListener('touchend', () => isDragging = false);
+
+    // Mouse events for desktop dragging
+    track.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      dragStartX = currentX;
+      track.style.cursor = 'grabbing';
+      // Prevent default to avoid text selection while dragging
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      currentX = dragStartX + dx;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        track.style.cursor = 'grab';
+      }
+    });
+
+    // Optional: wheel scroll for horizontal scrolling
+    carousel.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+        e.preventDefault();
+        currentX -= e.deltaX;
+      }
+    }, {passive: false});
+
+    track.style.cursor = 'grab';
+
+    // The animation loop
+    function autoTick() {
+      if (!isHovered && !isDragging) {
+        currentX -= speed;
+      }
+      
+      const halfWidth = track.scrollWidth / 2;
+      
+      // Infinite loop check
+      if (currentX <= -halfWidth) {
+        currentX += halfWidth;
+      } else if (currentX > 0) {
+        currentX -= halfWidth;
+      }
+      
+      track.style.transform = `translateX(${currentX}px)`;
+      requestAnimationFrame(autoTick);
+    }
+    
+    // Give DOM a moment to render before grabbing scrollWidth
+    setTimeout(() => {
+      requestAnimationFrame(autoTick);
+    }, 500);
+  };
+
+  containers.forEach(wrapper => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            renderReviews(wrapper);
+            obs.unobserve(wrapper);
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+      observer.observe(wrapper);
+    } else {
+      renderReviews(wrapper);
+    }
   });
 }

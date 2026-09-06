@@ -110,7 +110,7 @@ function getFooterHTML() {
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/images/logo.webp" alt="Elysia Beauty Lounge" width="140" height="44">
+          <picture><source media="(max-width: 768px)" srcset="/images/logo-mobile.webp"><img src="/images/logo.webp" alt="Elysia Beauty Lounge" width="140" height="44"></picture>
           <p>Salon de înfrumusețare premium în zona Unirii: manichiură & pedichiură, coafor & extensii, make-up, sprâncene, epilare definitivă.</p>
         </div>
         <div>
